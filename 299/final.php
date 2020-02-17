@@ -118,6 +118,113 @@ if(isset($_POST["submit"])){
         center: [90.4076099395752, 23.79755276035878],
         zoom: 16
     });
+
+     map.on('load', function() {
+		map.addSource('pointsSource', {
+			'type': 'geojson',
+			'data': {
+			  "type": "FeatureCollection",
+			  "features": [
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "A"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40494918823242, 23.79872545056962]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "B"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40568947792053,23.798470220055645]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "C"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40640830993652,23.79812663972582]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "D"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40753483772278,23.796634508894723]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "E"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.4060971736908,23.795770635844292]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "F"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40557146072388,23.79617312286651]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "G"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40488481521606,23.796457808056232]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "H"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40515303611754,23.79718424329992]
+			      }
+			    },
+			    {
+			      "type": "Feature",
+			      "properties": {
+			      	"title": "I"
+			      },
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [90.40444493293762,23.797429659694107]
+			      }
+			    }
+			  ]
+			}
+		});
+
+		map.addLayer({
+			'id': 'points',
+			'source': 'pointsSource',
+			'type': 'circle',
+		});
+	});
 </script>
 
 
